@@ -82,8 +82,11 @@ module Fae
       klass_base = params[:controller].split('/').last
       @klass_name = class_name || klass_base               # used in form views
       @klass = klass_base.classify.constantize             # used as class reference in this controller
+      Rails.logger.info "klass: #{@klass} #{@klass.class}"
       @klass_singular = klass_base.singularize             # used in index views
+      Rails.logger.info "klass_name: #{@klass_name} #{@klass_name.class}"
       @klass_humanized = @klass_name.singularize.humanize  # used in index views
+      Rails.logger.info "klass_humanized: #{@klass_humanized} #{@klass_humanized.class} #{@klass_humanized.pluralize.titleize}"
       @index_path = '/' + params[:controller]              # used in form_header partial
       @new_path = @index_path + '/new'                     # used in index_header partial
     end

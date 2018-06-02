@@ -2,7 +2,7 @@ module Fae
   module  ViewHelper
 
     def fae_date_format(datetime, timezone = @option.time_zone)
-      datetime.in_time_zone(timezone).strftime('%m/%d/%y') if is_date_or_time?(datetime)
+      datetime.in_time_zone(timezone).strftime(t('fae.date.format')) if is_date_or_time?(datetime)
     end
 
     def fae_datetime_format(datetime, timezone = @option.time_zone)

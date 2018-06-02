@@ -1,0 +1,20 @@
+pt:
+  fae:
+    add: Adicionar
+    recent_changes: Alterações Recentes
+    no_items_found: Nenhuns items encontrados
+    modified: Modificado
+    created_at: Criado
+    updated_at: Actualizado
+    modified_at: Modificado
+    cancel: Cancelar
+    save_notice: 'Sucesso. Estiveste bem.'
+    save_error: 'Vamos abrandar um pouco. Verifica os erros no teu formulário.'
+    delete_notice: 'Item removido com sucesso.'
+    delete_error: 'Este item tem objectos associados que impedem que este seja removido.'
+    delete_confirmation: 'Tens a certeza que queres apagar permanentemente este item?'
+    clone_confirmation: "Uma vez clonado, necessitas de apagar se mais tarde mudares de ideias. Queres continuar?"
+    unauthorized_error: 'Não estás autorizado a ver esta página.'
+    exceeded_upload_limit: "Vamos apontar para um ficheiro mais pequeno. Este asset é maior do que o limite de ### MB. Tens outro?"
+    date:
+      format: '%d/%m/%y'

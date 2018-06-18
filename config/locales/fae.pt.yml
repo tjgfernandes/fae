@@ -1,5 +1,9 @@
 pt:
   fae:
+    no_title_yet: Ainda nenhum %{title}, %{td_link}
+    add_some: adicionar um
+    _yes: Sim
+    _no: Não
     hello: Olá
     users: Utilizadores
     activity_log: Registo Actividade
@@ -59,6 +63,8 @@ pt:
     all_time: Qualquer altura
     all: Todos
     brief_description_of_image_contents_used_in_hover_text: Breve descrição do conteudo da imagem, utilizado no texto suspenso e utilizadores com deficiência visual.
+    live_url: URL de Produção
+    stage_url: URL de Desenvolvimento
     date:
       format: '%d/%m/%y'
   activerecord:
@@ -74,5 +80,6 @@ pt:
         first_name: Primeiro nome
         last_name: Apelido
         password: Palavra-passe
-        passsord_confirmation: Confirmação paralavra-passe
+        password_confirmation: Confirmação paralavra-passe
         remember_me: Lembrar de mim
+        role: Perfil

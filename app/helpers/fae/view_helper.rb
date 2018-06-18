@@ -39,11 +39,11 @@ module Fae
       url = fae.toggle_path(model_name, item.id.to_s, column)
 
       link_to url, class: "slider-wrapper #{link_class}", method: :post, remote: true do
-        '<div class="slider-options">
-          <div class="slider-option slider-option-yes">Yes</div>
-          <div class="slider-option-selector"></div>
-          <div class="slider-option slider-option-no">No</div>
-        </div>'.html_safe
+        "<div class=\"slider-options\">
+          <div class=\"slider-option slider-option-yes\">#{t('fae._yes')}</div>
+          <div class=\"slider-option-selector\"></div>
+          <div class=\"slider-option slider-option-no\">#{t('fae._no')}</div>
+        </div>".html_safe
       end
     end
 

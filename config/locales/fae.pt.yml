@@ -1,5 +1,26 @@
 pt:
   fae:
+    hello: Olá
+    users: Utilizadores
+    activity_log: Registo Actividade
+    project_name: Nome do Projecto
+    root_settings: Configurações de Raíz
+    back: Voltar
+    update: Actualizar
+    edit: Editar
+    submit: Enviar
+    sign_in: Entrar
+    sign_up: Registar
+    forgot_your_password: Esqueceu-se da passsword
+    didnt_receive_confirmation_instructions: Não recebeu instruções de confirmação
+    didnt_receive_unlock_instructions: Não recebeu instruções de desbloqueio
+    sign_in_with: Entrar com
+    preview_site: Pré-visualizar Site
+    live_site: Site em produção
+    view_site: Ver Site
+    stage_site: Site de desenvolvimento
+    log_out: Sair
+    your_settings: Configurações
     add: Adicionar
     recent_changes: Alterações Recentes
     no_items_found: Nenhuns items encontrados
@@ -10,12 +31,48 @@ pt:
     cancel: Cancelar
     save_notice: 'Sucesso. Estiveste bem.'
     save_error: 'Vamos abrandar um pouco. Verifica os erros no teu formulário.'
+    save: Guardar
     delete_notice: 'Item removido com sucesso.'
     delete_error: 'Este item tem objectos associados que impedem que este seja removido.'
     delete_confirmation: 'Tens a certeza que queres apagar permanentemente este item?'
     clone_confirmation: "Uma vez clonado, necessitas de apagar se mais tarde mudares de ideias. Queres continuar?"
     unauthorized_error: 'Não estás autorizado a ver esta página.'
     exceeded_upload_limit: "Vamos apontar para um ficheiro mais pequeno. Este asset é maior do que o limite de ### MB. Tens outro?"
-    select_one: Selecionar um
+    select_one: Selecionar
+    leave_it_blank_if_you_dont_want_to_change_it: "deixar em branco se não quiser alterar"
+    we_need_your_current_password_to_confirm_your_change: "precisamos da sua palavra passe actual para confirmar as alterações"
+    are_you_sure: Têm a certeza
+    search_changes: Procurar alterações
+    user: Utilizador
+    item: Item
+    type: Tipo
+    attributes_updated: Atributo(s) actualizado(s)
+    modified: Modificado
+    no_changes_recorded: Não foram registadas alterações
+    created: criado
+    updated: actualizado
+    deleted: removido
+    last_hour: Última Hora
+    last_day: Último Dia
+    last_week: Última Semana
+    last_month: Último Mês
+    all_time: Qualquer altura
+    all: Todos
+    brief_description_of_image_contents_used_in_hover_text: Breve descrição do conteudo da imagem, utilizado no texto suspenso e utilizadores com deficiência visual.
     date:
       format: '%d/%m/%y'
+  activerecord:
+    models:
+      fae/staticpage:
+        one: Static page
+        other: Static pages
+      fae/user:
+        one: Utilizador
+        other: Utilizadores
+    attributes:
+      fae/user:
+        first_name: Primeiro nome
+        last_name: Apelido
+        password: Palavra-passe
+        passsord_confirmation: Confirmação paralavra-passe
+        remember_me: Lembrar de mim

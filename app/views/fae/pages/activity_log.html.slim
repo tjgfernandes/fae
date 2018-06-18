@@ -1,21 +1,21 @@
-== render 'fae/shared/index_header', title: 'Activity Log', new_button: false
+== render 'fae/shared/index_header', title: t('fae.activity_log'), new_button: false
 
 main.content
 
-  == fae_filter_form title: 'Search Changes', action: fae.activity_log_filter_path do
+  == fae_filter_form title: t('fae.search_changes'), action: fae.activity_log_filter_path do
     == fae_filter_select :user, options: Fae::User.all.map { |u| [u.full_name, u.id] }
     == fae_filter_select :model, options: Fae::Change.unique_changeable_types
-    == fae_filter_select :type, options: ['created', 'updated', 'deleted']
-    == fae_filter_select :date, options: ['Last Hour', 'Last Day', 'Last Week', 'Last Month'], placeholder: 'All Time'
+    == fae_filter_select :type, options: [[t('fae.created'),'created'], [t('fae.updated'),'updated'], [t('fae.deleted'),'deleted']]
+    == fae_filter_select :date, options: [[t('fae.last_hour'), 'Last Hour'], [t('fae.last_day'), 'Last Day'], [t('fae.last_week'), 'Last Week'], [t('fae.last_month'),'Last Month']], placeholder: t('fae.all_time')
 
   table.js-results-table
     thead
       tr
-        th data-sort="user.first_name" User
-        th data-sort="changeable_type" Item
-        th data-sort="change_type" Type
-        th Attribute(s) Updated
-        th data-sort="updated_at" Modified
+        th data-sort="user.first_name" #{t('fae.user')}
+        th data-sort="changeable_type" #{t('fae.item')}
+        th data-sort="change_type" #{t('fae.type')}
+        th = t('fae.attributes_updated')
+        th data-sort="updated_at" #{t('fae.modified')}
     tbody
       - if @items.present?
         - @items.each do |change|
@@ -27,6 +27,6 @@ main.content
             td = fae_datetime_format(change.updated_at)
       - else
         tr
-          td colspan=5 No changes recorded
+          td colspan=5 #{t('fae.no_changes_recorded')}
 
   == fae_paginate @items

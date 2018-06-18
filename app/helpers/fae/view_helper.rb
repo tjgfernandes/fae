@@ -107,7 +107,7 @@ module Fae
       options[:label]           ||= attribute.to_s.titleize
       options[:collection]      ||= default_collection_from_attribute(attribute)
       options[:label_method]    ||= :fae_display_field
-      options[:placeholder]       = "All #{options[:label].pluralize}" if options[:placeholder].nil?
+      options[:placeholder]       = "#{t('fae.all')} #{options[:label].pluralize}" if options[:placeholder].nil?
       options[:options]         ||= []
       options[:grouped_by]      ||= nil
       options[:grouped_options] ||= []

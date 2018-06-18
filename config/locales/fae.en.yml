@@ -1,11 +1,33 @@
 en:
   fae:
+    hello: Hello
+    users: Utilizadores
+    activity_log: Activity Log
+    project_name: Project Name
+    root_settings: Root Settings
+    back: Back
+    update: Update
+    edit: Edit
+    submit: Submit
+    sign_in: Sign in
+    sign_up: Sign up
+    forgot_your_password: Forgot your password
+    didnt_receive_confirmation_instructions: Didn't receive confirmation instructions
+    didnt_receive_unlock_instructions: Didn't receive unlock instructions
+    sign_in_with: Sign in with
+    preview_site: Preview Site
+    live_site: Live Site
+    view_site: View Site
+    state_site: Stage Site
+    log_out: Log Out
+    your_settings: Your Settings
     add: Add
     recent_changes: Recent Changes
     no_items_found: No items found
     cancel: Cancel
     save_notice: 'Success. You’ve done good.'
     save_error: 'Let’s slow down a bit. Check your form for errors.'
+    save: Save
     delete_notice: 'Item was successfully removed.'
     delete_error: 'This item has associated objects that prevent it from being removed.'
     delete_confirmation: 'Are you sure you want to permanently delete this item?'
@@ -13,5 +35,34 @@ en:
     unauthorized_error: 'You are not authorized to view that page.'
     exceeded_upload_limit: "Let's aim for smaller. This asset is larger than the ### MB limit. Got another?"
     select_one: Select One
+    leave_it_blank_if_you_dont_want_to_change_it: "leave it blank if you don't want to change it"
+    we_need_your_current_password_to_confirm_your_change: "we need your current password to confirm your changes"
+    cancel_my_account: "Cancel my account"
+    are_you_sure: Are you sure
+    search_changes: Search Changes
+    user: User
+    item: Item
+    type: Type
+    attributes_updated: Attribute(s) Updated
+    modified: Modified
+    no_changes_recorded: No changes recorded
+    created: created
+    updated: updated
+    deleted: deleted
+    last_hour: Last Hour
+    last_day: Last Day
+    last_week: Last Week
+    last_month: Last Month
+    all_time: All Time
+    all: All
+    brief_description_of_image_contents_used_in_hover_text: Brief description of image contents, used in hover text and by visually impaired users.
     date:
       format: '%m/%d/%y'
+  activerecord:
+    models:
+      fae/staticpage:
+        one: Static page
+        other: Static pages
+      fae/user:
+        one: Utilizador
+        other: Utilizadores

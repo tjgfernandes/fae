@@ -41,7 +41,7 @@ nav.nav.mobilenav
               li: a href=fae.users_path Users
               li: a href=fae.activity_log_path Activity Log
               - if current_user.super_admin?
-                li: a href=fae.option_path Root Settings
+                li: a href=fae.option_path #{t('fae.root_settings')}
 
     - if user_signed_in?
       li.mobilenav-user
@@ -57,10 +57,10 @@ nav.nav.mobilenav
         - if site_urls_are_present
           a href="#" View Site
           ul.subnav.js-subnav
-            li: span.mobilenav-subheader.js-mobile-back View Site
-            li: a.-viewsite href=@option.stage_url target="_blank" Preview Site
-            li: a.-viewsite href=@option.live_url target="_blank" Live Site
+            li: span.mobilenav-subheader.js-mobile-back #{t('fae.view_site')}
+            li: a.-viewsite href=@option.stage_url target="_blank" #{t('fae.preview_site')}
+            li: a.-viewsite href=@option.live_url target="_blank" #{t('fae.live_site')}
         - elsif @option.stage_url.present?
-          a.-viewsite href=@option.stage_url target="_blank" Preview Site
+          a.-viewsite href=@option.stage_url target="_blank" #{t('fae.preview_site')}
         - elsif @option.live_url.present?
-          a.-viewsite href=@option.live_url target="_blank" Live Site
+          a.-viewsite href=@option.live_url target="_blank" #{t('fae.live_site')}

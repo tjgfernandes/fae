@@ -4,4 +4,4 @@
     = f.input :password, required: false
     .login-form-actions
       = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-      = f.button :submit, "Submit", class: "login-form-actions-submit"
+      = f.button :submit, t('fae.submit'), class: "login-form-actions-submit"

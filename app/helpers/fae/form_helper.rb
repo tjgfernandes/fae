@@ -4,7 +4,7 @@ module Fae
     def fae_input(f, attribute, options={})
       custom_options attribute, options
       language_support f, attribute, options
-      label_and_hint attribute, options
+      label_and_hint f, attribute, options
       list_order f, attribute, options
       set_prompt f, attribute, options
 
@@ -18,7 +18,7 @@ module Fae
 
     def fae_association(f, attribute, options={})
       custom_options attribute, options
-      label_and_hint attribute, options
+      label_and_hint f, attribute, options
       list_order f, attribute, options
       set_prompt f, attribute, options if !options[:include_blank].is_a?(String)
 
@@ -116,12 +116,12 @@ module Fae
       options.update(validate: true) unless options[:validate].present? && options[:validate] == false
     end
 
-    def label_and_hint(attribute, options)
+    def label_and_hint(f, attribute, options)
       hint = options[:hint]
 
       options[:helper_text] = attempt_common_helper_text(attribute) if options[:helper_text].blank?
 
-      attribute_name = options[:as].to_s == 'hidden' ? '' : attribute.to_s.titleize
+      attribute_name = options[:as].to_s == 'hidden' ? '' : f.object.class.human_attribute_name(attribute)
       label = options[:label] || attribute_name
       if options[:markdown_supported].present? || options[:helper_text].present?
         label += content_tag :h6, class: 'helper_text' do
@@ -192,7 +192,7 @@ module Fae
 
     # sets default prompt for pulldowns
     def set_prompt(f, attribute, options)
-      options[:prompt] = 'Select One' if is_association?(f, attribute) && f.object.class.reflect_on_association(attribute).macro == :belongs_to && options[:prompt].nil? && !options[:two_pane]
+      options[:prompt] = t('fae.select_one') if is_association?(f, attribute) && f.object.class.reflect_on_association(attribute).macro == :belongs_to && options[:prompt].nil? && !options[:two_pane]
     end
 
     # removes language suffix from label and adds data attr for languange nav

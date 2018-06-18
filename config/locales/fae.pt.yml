@@ -16,5 +16,6 @@ pt:
     clone_confirmation: "Uma vez clonado, necessitas de apagar se mais tarde mudares de ideias. Queres continuar?"
     unauthorized_error: 'Não estás autorizado a ver esta página.'
     exceeded_upload_limit: "Vamos apontar para um ficheiro mais pequeno. Este asset é maior do que o limite de ### MB. Tens outro?"
+    select_one: Selecionar um
     date:
       format: '%d/%m/%y'

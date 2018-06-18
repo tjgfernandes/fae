@@ -12,5 +12,6 @@ en:
     clone_confirmation: "Once you clone, you'll need to delete if you later change your mind. Still want to?"
     unauthorized_error: 'You are not authorized to view that page.'
     exceeded_upload_limit: "Let's aim for smaller. This asset is larger than the ### MB limit. Got another?"
+    select_one: Select One
     date:
       format: '%m/%d/%y'

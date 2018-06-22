@@ -1,5 +1,6 @@
 pt:
   fae:
+    need_some_help: Precisa de ajuda
     no_title_yet: Ainda nenhum %{title}, %{td_link}
     add_some: adicionar um
     _yes: Sim

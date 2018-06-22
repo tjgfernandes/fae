@@ -1,5 +1,6 @@
 en:
   fae:
+    need_some_help: Need some help
     fae_no_title_yet: No %{title} yet, %{td_link}
     add_some: Add some
     _yes: Yes

@@ -1151,7 +1151,7 @@ jQuery.trumbowyg = {
                 },
                 target: {
                     label: t.lang.target,
-                    value: target
+                    value: target || '_blank'
                 }
             }, function (v) { // v is value
                 var link = $(['<a href="', v.url, '">', v.text, '</a>'].join(''));
